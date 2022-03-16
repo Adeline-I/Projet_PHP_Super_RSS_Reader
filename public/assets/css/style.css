@@ -140,6 +140,35 @@ i {
     background-color: #fcaB3D;
 }
 
+/* ---------- Début Page Article ---------- */
+.articleSection .colBorder, .articleSection .themeArticleHeader {
+    border-bottom: 0.2rem solid #fcab3d;
+    }
+    .articleSection .themeArticle {
+        text-align: center;
+        font-weight: bold;
+        text-decoration: underline #fcab3d;
+    }
+    .articleSection .titleArticle {
+        font-weight: bold;
+    }
+    .articleSection .linkArticle {
+        color: #212529;
+        text-decoration: none;
+    }
+    .articleSection .card {
+        border: none;
+    }
+    .articleSection .card-header, .articleSection .card-body {
+        border-bottom: 0.1rem solid #fcab3d;
+    }
+    @media (min-width: 992px) {
+        .articleSection .colBorder {
+            border-right: 0.2rem solid #fcab3d;
+            border-bottom: none;
+        }
+    }
+    /* ---------- Fin Page Article ---------- */
 /*Media queries*/
 /* @media (max-width: 1216px) {
     .carousel-control-prev-icon {
