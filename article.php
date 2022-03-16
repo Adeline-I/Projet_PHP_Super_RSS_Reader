@@ -6,7 +6,7 @@ include(dirname(__FILE__).'/views/templates/header.php');
 
 <?php
 
-include(dirname(__FILE__).'/views/home.php');
+include(dirname(__FILE__).'/views/pages.php');
 
 ?>
 
