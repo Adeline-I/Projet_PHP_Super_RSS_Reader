@@ -3,12 +3,45 @@
     color: #fb983b !important;
 }
 /* NavBar */
-
 /* footer */
 .footerBlack {
     background-color: #fb983bcb;
 }
+
 .copyBlack {
     background-color: #fb983b;
 }
 /* footer */
+/* Modal */
+.modal-content {
+    background-color: #fff;
+    border-color: #fb983bcb;
+    border-radius: 5px;
+    color: #fb983bcb;
+}
+
+.modal-header {
+    color: #fb983bcb;
+    border-color: #fb983bcb;
+}
+
+.modal-footer {
+    border-color: #fb983bcb;
+}
+.form-check-input:checked {
+    background-color: #fb983b;
+    border-color: #fb983b;
+}
+
+.btn-dark {
+    background-color: #fff;
+    border-color: #fb983b;
+    color: #fb983b;
+}
+
+.btn-dark:hover {
+    background-color: #fb983b;
+    border-color: #fb983b;
+    color: #fff;
+}
+/* Modal */
