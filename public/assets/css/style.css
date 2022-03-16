@@ -1,11 +1,133 @@
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap');
+
 body {
-    background-color: #faf8ff;
-    font-family: 'Ubuntu', sans-serif;
+    background-image: url(https://i.ibb.co/dGZ55Dx/ideebackground2.png);
+    background-size: cover;
+    background-position: top;
+    color: #202225;
+    transition: background 0.2s linear;
+    /* darkmode transition*/
+    height: 100.0vh;
+    font-family: 'Merriweather Sans', sans-serif;
 }
+header a {
+    font-size: 20px;
+    font-weight: 600;
+}
+.home-content p {
+    font-size: 15px;
+    font-weight: 600;
+    color: #fb983b;
+}
+
+/* Début Dark mode */
+body.dark {
+    background-image: url(https://i.ibb.co/RPZKZkL/ideebackground.png);
+    background-size: cover;
+    background-position: top;
+    color: #FAF8FF;
+}
+.checkbox {
+    opacity: 0;
+    position: absolute;
+}
+.label {
+    background-color: #fb983b;
+    border-radius: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    position: relative;
+    height: 26px;
+    width: 50px;
+    transform: scale(1.5);
+}
+.label .ball {
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    height: 22px;
+    width: 22px;
+    transform: translateX(0px);
+    transition: transform 0.2s linear;
+}
+.checkbox:checked+.label .ball {
+    transform: translateX(24px);
+}
+.fa-moon, .fa-sun {
+    color: #fb983b;
+}
+/* Fin Dark mode */
+
+/* ---------- Début NavBar ---------- */
+.nav-link, i {
+    color: #fb983b !important;
+}
+
+/* Début effet sur lien */
+.link-6 a:hover {
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    -o-transform: scale(1.05);
+    transform: scale(1.05);
+}
+.link-6 a {
+    -webkit-transition: all 0.1s linear;
+    transition: all 0.1s linear;
+}
+/* Fin effet sur lien */
+
+/* ---------- Fin NavBar ---------- */
+
+/* ---------- Début Page Home ---------- */
+/* Carousel Size */
+.carousel {
+    max-width: 700px;
+    margin: 1% auto;
+    box-shadow: 10px 10px 71px -103px rgba(251,121,53,0.17);
+    -webkit-box-shadow: 10px 10px 71px -103px rgba(251,121,53,0.17);
+    -moz-box-shadow: 10px 10px 71px -103px rgba(251,121,53,0.17);
+}
+/* Icon preview and next in Carousel */
+.carousel-control-prev-icon {
+    background-color: #fcab3d;
+    margin: 1%;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    color: #FAF8FF;
+    font-size: 0.5em;
+    font-weight: bolder;
+    outline: none;
+}
+.carousel-control-next-icon {
+    background-color: #fcab3d;
+    margin: 1%;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    color: #FAF8FF;
+    font-size: 0.5em;
+    font-weight: bolder;
+    outline: none;
+}
+.carousel-indicators{
+    border-color: #fcab3d;
+    color: #fcab3d;
+}
+#carouselExampleIndicators {
+    background-color: #fcab3d;
+}
+/* ---------- Fin Page Home ---------- */
+
 /* ---------- Début Page Article ---------- */
 .articleSection .colBorder, .articleSection .themeArticleHeader {
-border-bottom: 0.2rem solid #fcab3d;
+    border-bottom: 0.2rem solid #fcab3d;
 }
 .articleSection .themeArticle {
     text-align: center;
@@ -32,3 +154,10 @@ border-bottom: 0.2rem solid #fcab3d;
     }
 }
 /* ---------- Fin Page Article ---------- */
+
+
+/* ---------- Début Footer ---------- */
+.footerBlack, .copyBlack {
+    background-color: #fb983b;
+}
+/* ---------- Fin Footer ---------- */
