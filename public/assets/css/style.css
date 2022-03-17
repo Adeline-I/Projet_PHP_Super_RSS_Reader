@@ -170,9 +170,6 @@ li {
 /* ---------- Fin Page Home ---------- */
 
 /* ---------- Début Page Article ---------- */
-.articleSection, .colBorder, .articleSection, .themeArticleHeader {
-    border-bottom: 0.2rem solid #fcab3d;
-}
 .articleSection, .themeArticle {
     text-align: center;
     font-weight: bold;
@@ -196,21 +193,16 @@ li {
 .titleArticle  {
     color: #fcab3d;
 }
-.articleSection, .card {
+.articleSection .card {
     border: 2px #fb983b solid;
 }
-.articleSection, .card-header, .articleSection, .card-body {
+.articleSection .card-header, .articleSection .card-body {
     border-bottom: 0.1rem solid #fcab3d;
 }
 .art {
     color: #fb983b;
 }
-@media (min-width: 992px) {
-    .articleSection, .colBorder {
-        border-right: 0.2rem solid #fcab3d;
-        border-bottom: none;
-    }
-}
+
 /* ---------- Fin Page Article ---------- */
 
 /* ---------- Début Footer ---------- */
