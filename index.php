@@ -1,18 +1,5 @@
 <?php
 
-include(dirname(__FILE__).'/views/templates/header.php');
+header('location: /controllers/home-controller.php');
 
-?>
-
-<?php
-
-include(dirname(__FILE__).'/views/home.php');
-
-?>
-
-
-<?php
-
-include(dirname(__FILE__).'/views/templates/footer.php');
-
-?>
+die;

@@ -12,7 +12,7 @@
     <!-- Bootstrap5 Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="./public/assets/css/style.css">
+    <link rel="stylesheet" href="/public/assets/css/style.css">
     <title>AZIRI - Actualités Gaming</title>
 </head>
 
@@ -23,7 +23,7 @@
             <div class="container-fluid">
                 <!-- Navbar brand left-->
                 <a class="navbar-brand" href="/html/nav_footer.html">
-                    <img src="./public/assets/img/Aziri_logo_transparent2.jpg.png"
+                    <img src="/public/assets/img/Aziri_logo_transparent2.jpg.png"
                         alt="AZIRI, toute l'actualité gaming, une fusée décolle dans un panneau de signalisation et sur un fond orange"
                         id="brand">
                 </a>
