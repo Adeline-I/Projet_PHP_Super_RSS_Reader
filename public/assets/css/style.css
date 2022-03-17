@@ -121,7 +121,6 @@ li {
     -webkit-transition: all 0.1s linear;
     transition: all 0.1s linear;
 }
-
 .nav-link:hover,  .bi-gear-fill:hover, .bi-chevron-up:hover, .bi-x-lg:hover {
     opacity: 0.6;
 }
@@ -161,7 +160,7 @@ li {
     font-weight: bolder;
     outline: none;
 }
-.carousel-indicators{
+.carousel-indicators {
     border-color: #fcab3d;
     color: #fcab3d;
 }
@@ -237,3 +236,19 @@ li {
 }
 /* Info bas de page pour le choix de l'actualité */
 /* ---------- Fin Footer ---------- */
+
+/* ---------- Début Page 404 ---------- */
+.titleError {
+    text-align: center;
+    font-weight: bold;
+    color: #fb983b;
+}
+.colError{
+    border-radius: 0.5rem;
+    border: 0.3rem solid #fb983b;
+}
+.messageError {
+    text-align: center;
+    font-weight: bold;
+}
+/* ---------- Fin Page 404 ---------- */
