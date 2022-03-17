@@ -27,3 +27,11 @@ function itemClicked(_v) {
 	return (ALLOW_THIS); /* fin gestionnaire de l'événements */
 
 }
+
+// selecteur clickable
+selectValue = document.getElementById('numberArticle');
+formSelect 	= document.getElementById('formSelect');
+
+formSelect.onchange = () => {
+	formSelect.submit();
+}
