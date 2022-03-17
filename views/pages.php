@@ -45,7 +45,7 @@
                 <div class="card mb-3">
                     <div class="row align-items-center">
                         <div class="col-4">
-                            <img src="<?=$item->enclosure['url']?>" class="img-fluid rounded-start imgArticle"
+                            <img src="<?=$item->enclosure['url']?>" class="img-fluid rounded-start imgArticle ms-2"
                                 alt="...">
                         </div>
                         <div class="col-8">
@@ -110,7 +110,7 @@
                 <div class="card mb-3">
                     <div class="row align-items-center">
                         <div class="col-4">
-                            <img src="<?= $item->enclosure['url'] ?>" class="img-fluid rounded-start imgArticle"
+                            <img src="<?= $item->enclosure['url'] ?>" class="img-fluid rounded-start imgArticle ms-2"
                                 alt="...">
                         </div>
                         <div class="col-8">
@@ -175,7 +175,7 @@
                 <div class="card mb-3">
                     <div class="row align-items-center">
                         <div class="col-4">
-                            <img src="<?=$item->enclosure['url']?>" class="img-fluid rounded-start imgArticle"
+                            <img src="<?=$item->enclosure['url']?>" class="img-fluid rounded-start imgArticle ms-2"
                                 alt="...">
                         </div>
                         <div class="col-8">
@@ -246,7 +246,7 @@
                 <div class="card mb-3">
                     <div class="row align-items-center">
                         <div class="col-4">
-                            <img src="<?=$item->enclosure['url']?>" class="img-fluid rounded-start imgArticle"
+                            <img src="<?=$item->enclosure['url']?>" class="img-fluid rounded-start imgArticle ms-2"
                                 alt="...">
                         </div>
                         <div class="col-8">
@@ -311,7 +311,7 @@
                 <div class="card mb-3">
                     <div class="row align-items-center">
                         <div class="col-4">
-                            <img src="<?= $item->enclosure['url'] ?>" class="img-fluid rounded-start imgArticle"
+                            <img src="<?= $item->enclosure['url'] ?>" class="img-fluid rounded-start imgArticle ms-2"
                                 alt="...">
                         </div>
                         <div class="col-8">
