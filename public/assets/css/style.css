@@ -27,9 +27,15 @@ body.dark, .themeArticle {
     background-position: top;
     color: #FAF8FF;
 }
+li {
+    justify-content: center;
+    align-items: center;
+}
 .checkbox {
     opacity: 0;
     position: absolute;
+    justify-content: center;
+    align-items: center;
 }
 .label {
     background-color: #fb983b;
@@ -37,7 +43,7 @@ body.dark, .themeArticle {
     cursor: pointer;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     padding: 5px;
     position: relative;
     height: 26px;
@@ -45,7 +51,7 @@ body.dark, .themeArticle {
     transform: scale(1);
 }
 .label .ball {
-    background-color: #fff;
+    background-color: #FAF8FF;
     border-radius: 50%;
     position: absolute;
     top: 2px;
@@ -65,10 +71,12 @@ body.dark, .themeArticle {
 
 /* Modal */
 .modal-content {
-    background-color: #fff;
+    background-color: #FAF8FF;
     border-color: #fb983bcb;
     border-radius: 5px;
     color: #fb983bcb;
+    border-style: none;
+    font-size: 15px;
 }
 .modal-header {
     color: #fb983bcb;
@@ -81,15 +89,18 @@ body.dark, .themeArticle {
     background-color: #fb983b;
     border-color: #fb983b;
 }
+.form-check-label{
+    font-size: 15px ;
+}
 .btn-dark {
-    background-color: #fff;
+    background-color: #FAF8FF;
     border-color: #fb983b;
     color: #fb983b;
 }
 .btn-dark:hover {
     background-color: #fb983b;
     border-color: #fb983b;
-    color: #fff;
+    color: #FAF8FF;
 }
 /* Fin Modal */
 
@@ -203,7 +214,6 @@ body.dark, .themeArticle {
 }
 /* ---------- Fin Page Article ---------- */
 
-
 /* ---------- Début Footer ---------- */
 .bi-chevron-up {
     color: #fff !important;
@@ -211,4 +221,19 @@ body.dark, .themeArticle {
 .footerBlack, .copyBlack {
     background-color: #fb983b;
 }
+/* Info bas de page pour le choix de l'actualité */
+.alert {
+	box-sizing: border-box;
+	background-color: transparent;
+	width: 100%;
+	position: relative;
+	z-index: 300;
+	padding: 20px 40px;
+}
+.alert h6 {
+	font-size: 15px;
+	color: #BEB6B8;
+	margin-top: 0;
+}
+/* Info bas de page pour le choix de l'actualité */
 /* ---------- Fin Footer ---------- */
