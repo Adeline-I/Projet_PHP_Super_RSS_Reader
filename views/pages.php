@@ -2,11 +2,11 @@
     <div class="container-fluid">
         <div class="row">
             <!-- Première Thématique -->
-            <div class="col-12 col-lg-4 pt-3 px-4 colBorder">
+            <div class="col-12 col-lg-4 pt-3 px-4 mb-5 pb-5 colBorder">
                 <div>
                     <div class="row align-items-center pb-3 pb-md-5 pb-lg-3 pb-xl-3 my-3 themeArticleHeader">
                         <div class="col-12 col-md-7 col-lg-12 col-xxl-8 mb-3">
-                            <h4 class="themeArticle m-0 display-6">Thématique 1</h4>
+                            <h4 class="themeArticle m-0 display-6" id="xbox">Xbox série X</h4>
                         </div>
                         <div class="col-12 col-md-5 col-lg-12 col-xxl-4">
                             <div class="mb-3">
@@ -20,86 +20,58 @@
                                         </select>
                                     </div>
                                     <div class="col-2 col-md-6 col-lg-2 col-xxl-5 p-0">
-                                        <label class="form-label m-0" for="numberArticle">articles</label>
+                                        <label class="form-label art m-0" for="numberArticle">articles</label>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                <!-- rss Xbox série X  -->
+                <?php 
+                    $rssLinkXbox = "https://www.jeuxactu.com/rss/xbox-series-x.rss";
+                    $rssLoadXbox = simplexml_load_file($rssLinkXbox);
+                    $counter = 0;
+                    $limit = 13;
+                    foreach($rssLoadXbox ->channel->item as $item) {
+                        $counter++;
+                        if ($counter == $limit){
+                            break;
+                        }
+                        $originalDate = $item->children('dc',true);
+                        $timestamp = strtotime($originalDate); 
+                        $newDate = date("d-m-Y H:i:s", $timestamp );
+                ?>
                 <div class="card mb-3">
                     <div class="row align-items-center">
                         <div class="col-4">
-                            <img src="/public/assets/img/Aziri_logo.png" class="img-fluid rounded-start imgArticle"
+                            <img src="<?=$item->enclosure['url']?>" class="img-fluid rounded-start imgArticle"
                                 alt="...">
                         </div>
                         <div class="col-8">
                             <div class="card-header">
-                                <p class="dateArticle mb-2">15/03/2022</p>
-                                <h5 class="card-title titleArticle">Titre de l'article</h5>
+                                <p class="dateArticle mb-2"><?=$newDate ?></p>
+                                <h5 class="card-title titleArticle"><?= $item->title ?></h5>
                             </div>
                             <div class="card-body">
                                 <p class="card-text descriptionArticle">
-                                    Description de l'article
+                                <?= $item->description ?>
                                 </p>
                             </div>
                             <div class="card-footer">
-                                <a href="#" role="button" class="linkArticle">Lire l'article</a>
+                                <a href="<?= $item->link ?>" role="button" class="linkArticle">Lire l'article... </a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="card mb-3">
-                    <div class="row align-items-center">
-                        <div class="col-4">
-                            <img src="/public/assets/img/Aziri_logo.png" class="img-fluid rounded-start imgArticle"
-                                alt="...">
-                        </div>
-                        <div class="col-8">
-                            <div class="card-header">
-                                <p class="dateArticle mb-2">15/03/2022</p>
-                                <h5 class="card-title titleArticle">Titre de l'article</h5>
-                            </div>
-                            <div class="card-body">
-                                <p class="card-text descriptionArticle">
-                                    Description de l'article
-                                </p>
-                            </div>
-                            <div class="card-footer">
-                                <a href="#" role="button" class="linkArticle">Lire l'article</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="card mb-3">
-                    <div class="row align-items-center">
-                        <div class="col-4">
-                            <img src="/public/assets/img/Aziri_logo.png" class="img-fluid rounded-start imgArticle"
-                                alt="...">
-                        </div>
-                        <div class="col-8">
-                            <div class="card-header">
-                                <p class="dateArticle mb-2">15/03/2022</p>
-                                <h5 class="card-title titleArticle">Titre de l'article</h5>
-                            </div>
-                            <div class="card-body">
-                                <p class="card-text descriptionArticle">
-                                    Description de l'article
-                                </p>
-                            </div>
-                            <div class="card-footer">
-                                <a href="#" role="button" class="linkArticle">Lire l'article</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <?php } ?>
             </div>
             <!-- Deuxième Thématique -->
-            <div class="col-12 col-lg-4 pt-3 px-4 colBorder">
+            <div class="col-12 col-lg-4 pt-3 px-4 mb-5 pb-5 colBorder">
                 <div>
                     <div class="row align-items-center pb-3 pb-md-5 pb-lg-3 pb-xl-3 my-3 themeArticleHeader">
                         <div class="col-12 col-md-7 col-lg-12 col-xxl-8 mb-3">
-                            <h4 class="themeArticle m-0 display-6">Thématique 1</h4>
+                            <h4 class="themeArticle m-0 display-6" id="ps5">PS5</h4>
                         </div>
                         <div class="col-12 col-md-5 col-lg-12 col-xxl-4">
                             <div class="mb-3">
@@ -113,86 +85,58 @@
                                         </select>
                                     </div>
                                     <div class="col-2 col-md-6 col-lg-2 col-xxl-5 p-0">
-                                        <label class="form-label m-0" for="numberArticle">articles</label>
+                                        <label class="form-label art m-0" for="numberArticle">articles</label>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                <!-- rss ps5  -->
+                <?php 
+                    $rssLinkPS5 = "https://www.jeuxactu.com/rss/ps5.rss";
+                    $rssLoadPS5 = simplexml_load_file($rssLinkPS5);
+                    $counter = 0;
+                    $limit = 13;
+                    foreach($rssLoadPS5 ->channel->item as $item) {
+                        $counter++;
+                        if ($counter == $limit){
+                            break;
+                        }
+                        $originalDate = $item->children('dc',true);
+                        $timestamp = strtotime($originalDate); 
+                        $newDate = date("d-m-Y H:i:s", $timestamp );
+                ?>
                 <div class="card mb-3">
                     <div class="row align-items-center">
                         <div class="col-4">
-                            <img src="/public/assets/img/Aziri_logo.png" class="img-fluid rounded-start imgArticle"
+                            <img src="<?= $item->enclosure['url'] ?>" class="img-fluid rounded-start imgArticle"
                                 alt="...">
                         </div>
                         <div class="col-8">
                             <div class="card-header">
-                                <p class="dateArticle mb-2">15/03/2022</p>
-                                <h5 class="card-title titleArticle">Titre de l'article</h5>
+                                <p class="dateArticle mb-2"><?=$newDate ?></p>
+                                <h5 class="card-title titleArticle"><?= $item->title ?></h5>
                             </div>
                             <div class="card-body">
                                 <p class="card-text descriptionArticle">
-                                    Description de l'article
+                                    <?= $item->description ?>
                                 </p>
                             </div>
                             <div class="card-footer">
-                                <a href="#" role="button" class="linkArticle">Lire l'article</a>
+                                <a href="<?= $item->link ?>" role="button" class="linkArticle">Lire l'article... </a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="card mb-3">
-                    <div class="row align-items-center">
-                        <div class="col-4">
-                            <img src="/public/assets/img/Aziri_logo.png" class="img-fluid rounded-start imgArticle"
-                                alt="...">
-                        </div>
-                        <div class="col-8">
-                            <div class="card-header">
-                                <p class="dateArticle mb-2">15/03/2022</p>
-                                <h5 class="card-title titleArticle">Titre de l'article</h5>
-                            </div>
-                            <div class="card-body">
-                                <p class="card-text descriptionArticle">
-                                    Description de l'article
-                                </p>
-                            </div>
-                            <div class="card-footer">
-                                <a href="#" role="button" class="linkArticle">Lire l'article</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="card mb-3">
-                    <div class="row align-items-center">
-                        <div class="col-4">
-                            <img src="/public/assets/img/Aziri_logo.png" class="img-fluid rounded-start imgArticle"
-                                alt="...">
-                        </div>
-                        <div class="col-8">
-                            <div class="card-header">
-                                <p class="dateArticle mb-2">15/03/2022</p>
-                                <h5 class="card-title titleArticle">Titre de l'article</h5>
-                            </div>
-                            <div class="card-body">
-                                <p class="card-text descriptionArticle">
-                                    Description de l'article
-                                </p>
-                            </div>
-                            <div class="card-footer">
-                                <a href="#" role="button" class="linkArticle">Lire l'article</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <?php } ?>
             </div>
             <!-- Troisième Thématique -->
-            <div class="col-12 col-lg-4 pt-3 px-4">
+            <div class="col-12 col-lg-4 pt-3 px-4 mb-5 pb-5">
                 <div>
                     <div class="row align-items-center pb-3 pb-md-5 pb-lg-3 pb-xl-3 my-3 themeArticleHeader">
                         <div class="col-12 col-md-7 col-lg-12 col-xxl-8 mb-3">
-                            <h4 class="themeArticle m-0 display-6">Thématique 1</h4>
+                            <h4 class="themeArticle m-0 display-6" id="switch">SWITCH</h4>
                         </div>
                         <div class="col-12 col-md-5 col-lg-12 col-xxl-4">
                             <div class="mb-3">
@@ -206,79 +150,187 @@
                                         </select>
                                     </div>
                                     <div class="col-2 col-md-6 col-lg-2 col-xxl-5 p-0">
-                                        <label class="form-label m-0" for="numberArticle">articles</label>
+                                        <label class="form-label art m-0" for="numberArticle">articles</label>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                <!-- rss switch  -->
+                <?php 
+                    $rssLinkSwitch = "https://www.jeuxactu.com/rss/switch.rss";
+                    $rssLoadSwitch = simplexml_load_file($rssLinkSwitch);
+                    $counter = 0;
+                    $limit = 13;
+                    foreach($rssLoadSwitch ->channel->item as $item) {
+                        $counter++;
+                        if ($counter == $limit){
+                            break;
+                        }
+                        $originalDate = $item->children('dc',true);
+                        $timestamp = strtotime($originalDate); 
+                        $newDate = date("d-m-Y H:i:s", $timestamp );
+                ?>
                 <div class="card mb-3">
                     <div class="row align-items-center">
                         <div class="col-4">
-                            <img src="/public/assets/img/Aziri_logo.png" class="img-fluid rounded-start imgArticle"
+                            <img src="<?=$item->enclosure['url']?>" class="img-fluid rounded-start imgArticle"
                                 alt="...">
                         </div>
                         <div class="col-8">
                             <div class="card-header">
-                                <p class="dateArticle mb-2">15/03/2022</p>
-                                <h5 class="card-title titleArticle">Titre de l'article</h5>
+                                <p class="dateArticle mb-2"><?=$newDate ?></p>
+                                <h5 class="card-title titleArticle"><?= $item->title ?></h5>
                             </div>
                             <div class="card-body">
                                 <p class="card-text descriptionArticle">
-                                    Description de l'article
+                                <?= $item->description ?>
                                 </p>
                             </div>
                             <div class="card-footer">
-                                <a href="#" role="button" class="linkArticle">Lire l'article</a>
+                                <a href="<?= $item->link ?>" role="button" class="linkArticle">Lire l'article... </a>
                             </div>
                         </div>
                     </div>
                 </div>
+                <?php } ?>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="articleSection">
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Quatrième Thématique -->
+            <div class="col-12 col-lg-4 pt-3 px-4 mb-5 pb-5 colBorder">
+                <div>
+                    <div class="row align-items-center pb-3 pb-md-5 pb-lg-3 pb-xl-3 my-3 themeArticleHeader">
+                        <div class="col-12 col-md-7 col-lg-12 col-xxl-8 mb-3">
+                            <h4 class="themeArticle m-0 display-6" id="pc">PC</h4>
+                        </div>
+                        <div class="col-12 col-md-5 col-lg-12 col-xxl-4">
+                            <div class="mb-3">
+                                <div class="row align-items-center justify-content-center">
+                                    <div class="col-4 col-md-6 col-lg-4 col-xxl-7 d-flex">
+                                        <select name="numberArticle" id="numberArticle"
+                                            class="form-select form-select-sm">
+                                            <option value="6">6</option>
+                                            <option value="9">9</option>
+                                            <option value="12">12</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-2 col-md-6 col-lg-2 col-xxl-5 p-0">
+                                        <label class="form-label art m-0" for="numberArticle">articles</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- rss PC  -->
+                <?php 
+                    $rssLinkPC = "https://www.jeuxactu.com/rss/pc.rss";
+                    $rssLoadPC = simplexml_load_file($rssLinkPC);
+                    $counter = 0;
+                    $limit = 13;
+                    foreach($rssLoadPC ->channel->item as $item) {
+                        $counter++;
+                        if ($counter == $limit){
+                            break;
+                        }
+                        $originalDate = $item->children('dc',true);
+                        $timestamp = strtotime($originalDate); 
+                        $newDate = date("d-m-Y H:i:s", $timestamp );
+                ?>
                 <div class="card mb-3">
                     <div class="row align-items-center">
                         <div class="col-4">
-                            <img src="/public/assets/img/Aziri_logo.png" class="img-fluid rounded-start imgArticle"
+                            <img src="<?=$item->enclosure['url']?>" class="img-fluid rounded-start imgArticle"
                                 alt="...">
                         </div>
                         <div class="col-8">
                             <div class="card-header">
-                                <p class="dateArticle mb-2">15/03/2022</p>
-                                <h5 class="card-title titleArticle">Titre de l'article</h5>
+                                <p class="dateArticle mb-2"><?=$newDate ?></p>
+                                <h5 class="card-title titleArticle"><?= $item->title ?></h5>
                             </div>
                             <div class="card-body">
                                 <p class="card-text descriptionArticle">
-                                    Description de l'article
+                                <?= $item->description ?>
                                 </p>
                             </div>
                             <div class="card-footer">
-                                <a href="#" role="button" class="linkArticle">Lire l'article</a>
+                                <a href="<?= $item->link ?>" role="button" class="linkArticle">Lire l'article... </a>
                             </div>
                         </div>
                     </div>
                 </div>
+                <?php } ?>
+            </div>
+            <!-- Cinquième Thématique -->
+            <div class="col-12 col-lg-4 pt-3 px-4 mb-5 pb-5 colBorder">
+                <div>
+                    <div class="row align-items-center pb-3 pb-md-5 pb-lg-3 pb-xl-3 my-3 themeArticleHeader">
+                        <div class="col-12 col-md-7 col-lg-12 col-xxl-8 mb-3">
+                            <h4 class="themeArticle m-0 display-6" id="news">Les dernières News</h4>
+                        </div>
+                        <div class="col-12 col-md-5 col-lg-12 col-xxl-4">
+                            <div class="mb-3">
+                                <div class="row align-items-center justify-content-center">
+                                    <div class="col-4 col-md-6 col-lg-4 col-xxl-7 d-flex">
+                                        <select name="numberArticle" id="numberArticle"
+                                            class="form-select form-select-sm">
+                                            <option value="6">6</option>
+                                            <option value="9">9</option>
+                                            <option value="12">12</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-2 col-md-6 col-lg-2 col-xxl-5 p-0">
+                                        <label class="form-label art m-0" for="numberArticle">articles</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- rss News  -->
+                <?php 
+                    $rssLinkNews = "https://www.jeuxactu.com/rss/news.rss";
+                    $rssLoadNews = simplexml_load_file($rssLinkNews);
+                    $counter = 0;
+                    $limit = 13;
+                    foreach($rssLoadNews ->channel->item as $item) {
+                        $counter++;
+                        if ($counter == $limit){
+                            break;
+                        }
+                        $originalDate = $item->children('dc',true);
+                        $timestamp = strtotime($originalDate); 
+                        $newDate = date("d-m-Y H:i:s", $timestamp );
+                ?>
                 <div class="card mb-3">
                     <div class="row align-items-center">
                         <div class="col-4">
-                            <img src="/public/assets/img/Aziri_logo.png" class="img-fluid rounded-start imgArticle"
+                            <img src="<?= $item->enclosure['url'] ?>" class="img-fluid rounded-start imgArticle"
                                 alt="...">
                         </div>
                         <div class="col-8">
                             <div class="card-header">
-                                <p class="dateArticle mb-2">15/03/2022</p>
-                                <h5 class="card-title titleArticle">Titre de l'article</h5>
+                                <p class="dateArticle mb-2"><?=$newDate ?></p>
+                                <h5 class="card-title titleArticle"><?= $item->title ?></h5>
                             </div>
                             <div class="card-body">
                                 <p class="card-text descriptionArticle">
-                                    Description de l'article
+                                    <?= $item->description ?>
                                 </p>
                             </div>
                             <div class="card-footer">
-                                <a href="#" role="button" class="linkArticle">Lire l'article</a>
+                                <a href="<?= $item->link ?>" role="button" class="linkArticle">Lire l'article... </a>
                             </div>
                         </div>
                     </div>
                 </div>
+                <?php } ?>
             </div>
         </div>
     </div>

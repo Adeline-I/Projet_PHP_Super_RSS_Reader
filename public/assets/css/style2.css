@@ -21,8 +21,8 @@ header a {
 }
 
 /* Début Dark mode */
-body.dark {
-    background-image: url(https://i.ibb.co/F4xKtPm/ideebackground.png);
+body.dark, .themeArticle {
+    background-image: url(https://i.ibb.co/RPZKZkL/ideebackground.png);
     background-size: cover;
     background-position: top;
     color: #FAF8FF;
@@ -69,6 +69,41 @@ li {
 }
 /* Fin Dark mode */
 
+/* Modal */
+.modal-content {
+    background-color: #FAF8FF;
+    border-color: #fb983bcb;
+    border-radius: 5px;
+    color: #fb983bcb;
+    border-style: none;
+    font-size: 15px;
+}
+.modal-header {
+    color: #fb983bcb;
+    border-color: #fb983bcb;
+}
+.modal-footer {
+    border-color: #fb983bcb;
+}
+.form-check-input:checked {
+    background-color: #fb983b;
+    border-color: #fb983b;
+}
+.form-check-label{
+    font-size: 15px ;
+}
+.btn-dark {
+    background-color: #FAF8FF;
+    border-color: #fb983b;
+    color: #fb983b;
+}
+.btn-dark:hover {
+    background-color: #fb983b;
+    border-color: #fb983b;
+    color: #FAF8FF;
+}
+/* Fin Modal */
+
 /* ---------- Début NavBar ---------- */
 .nav-link, i {
     color: #fb983b !important;
@@ -85,6 +120,10 @@ li {
 .link-6 a {
     -webkit-transition: all 0.1s linear;
     transition: all 0.1s linear;
+}
+
+.nav-link:hover,  .bi-gear-fill:hover, .bi-chevron-up:hover, .bi-x-lg:hover {
+    opacity: 0.6;
 }
 /* Fin effet sur lien */
 
@@ -175,51 +214,13 @@ li {
 }
 /* ---------- Fin Page Article ---------- */
 
-
 /* ---------- Début Footer ---------- */
+.bi-chevron-up {
+    color: #fff !important;
+}
 .footerBlack, .copyBlack {
     background-color: #fb983b;
 }
-/* Modal */
-.modal-content {
-    background-color: #FAF8FF;
-    border-color: #fb983bcb;
-    border-radius: 5px;
-    color: #fb983bcb;
-    border-style: none;
-    font-size: 15px;
-}
-
-.modal-header {
-    color: #fb983bcb;
-    border-color: #fb983bcb;
-}
-
-.modal-footer {
-    border-color: #fb983bcb;
-}
-.form-check-input:checked {
-    background-color: #fb983b;
-    border-color: #fb983b;
-}
-
-.form-check-label{
-    font-size: 15px ;
-}
-
-.btn-dark {
-    background-color: #FAF8FF;
-    border-color: #fb983b;
-    color: #fb983b;
-}
-
-.btn-dark:hover {
-    background-color: #fb983b;
-    border-color: #fb983b;
-    color: #FAF8FF;
-}
-/* Modal */
-
 /* Info bas de page pour le choix de l'actualité */
 .alert {
 	box-sizing: border-box;
@@ -229,11 +230,10 @@ li {
 	z-index: 300;
 	padding: 20px 40px;
 }
-
 .alert h6 {
 	font-size: 15px;
 	color: #BEB6B8;
 	margin-top: 0;
 }
 /* Info bas de page pour le choix de l'actualité */
-
+/* ---------- Fin Footer ---------- */
