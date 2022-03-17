@@ -1,4 +1,7 @@
 <footer class="text-center text-white fixed-bottom footerBlack">
+            <a href="#brand">
+                <i class="bi bi-chevron-up"></i>
+            </a>
             <!-- Grid container -->
             <!-- <div class="container p-4"></div> -->
             <!-- Grid container -->

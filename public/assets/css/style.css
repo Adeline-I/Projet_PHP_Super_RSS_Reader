@@ -21,7 +21,7 @@ header a {
 }
 
 /* Début Dark mode */
-body.dark {
+body.dark, .themeArticle {
     background-image: url(https://i.ibb.co/RPZKZkL/ideebackground.png);
     background-size: cover;
     background-position: top;
@@ -42,7 +42,7 @@ body.dark {
     position: relative;
     height: 26px;
     width: 50px;
-    transform: scale(1.5);
+    transform: scale(1);
 }
 .label .ball {
     background-color: #fff;
@@ -91,7 +91,7 @@ body.dark {
     border-color: #fb983b;
     color: #fff;
 }
-/* Modal */
+/* Fin Modal */
 
 /* ---------- Début NavBar ---------- */
 .nav-link, i {
@@ -109,6 +109,10 @@ body.dark {
 .link-6 a {
     -webkit-transition: all 0.1s linear;
     transition: all 0.1s linear;
+}
+
+.nav-link:hover,  .bi-gear-fill:hover, .bi-chevron-up:hover, .bi-x-lg:hover {
+    opacity: 0.6;
 }
 /* Fin effet sur lien */
 
@@ -156,29 +160,43 @@ body.dark {
 /* ---------- Fin Page Home ---------- */
 
 /* ---------- Début Page Article ---------- */
-.articleSection .colBorder, .articleSection .themeArticleHeader {
+.articleSection, .colBorder, .articleSection, .themeArticleHeader {
     border-bottom: 0.2rem solid #fcab3d;
 }
-.articleSection .themeArticle {
+.articleSection, .themeArticle {
     text-align: center;
     font-weight: bold;
     text-decoration: underline #fcab3d;
 }
-.articleSection .titleArticle {
+.articleSection, .titleArticle {
     font-weight: bold;
 }
-.articleSection .linkArticle {
+.dateArticle, .linkArticle {
+    color: #767c81;
+    text-decoration: none;
+}
+
+.articleSection  {
     color: #212529;
     text-decoration: none;
 }
-.articleSection .card {
-    border: none;
+.linkArticle:hover {
+    color: #fb983b;
 }
-.articleSection .card-header, .articleSection .card-body {
+.titleArticle  {
+    color: #fcab3d;
+}
+.articleSection, .card {
+    border: 2px #fb983b solid;
+}
+.articleSection, .card-header, .articleSection, .card-body {
     border-bottom: 0.1rem solid #fcab3d;
 }
+.art {
+    color: #fb983b;
+}
 @media (min-width: 992px) {
-    .articleSection .colBorder {
+    .articleSection, .colBorder {
         border-right: 0.2rem solid #fcab3d;
         border-bottom: none;
     }
@@ -187,6 +205,9 @@ body.dark {
 
 
 /* ---------- Début Footer ---------- */
+.bi-chevron-up {
+    color: #fff !important;
+}
 .footerBlack, .copyBlack {
     background-color: #fb983b;
 }

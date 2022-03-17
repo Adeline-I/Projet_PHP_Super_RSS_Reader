@@ -39,15 +39,23 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto text-center fs-4">
                         <li class="nav-item me-2 ms-2">
-                            <a class="nav-link" href="">Thématique 1
+                            <a class="nav-link" href="#xbox">Xbox série X
                             </a>
                         </li>
                         <li class="nav-item me-2 ms-2">
-                            <a class="nav-link" href="">Thématique 2
+                            <a class="nav-link" href="#ps5">PS5
                             </a>
                         </li>
                         <li class="nav-item me-2 ms-2">
-                            <a class="nav-link" href="">Thématique 3
+                            <a class="nav-link" href="#switch">SWITCH
+                            </a>
+                        </li>
+                        <li class="nav-item me-2 ms-2">
+                            <a class="nav-link" href="#pc">PC
+                            </a>
+                        </li>
+                        <li class="nav-item me-2 ms-2">
+                            <a class="nav-link" href="#news">Les dernières News
                             </a>
                         </li>
                     </ul>
