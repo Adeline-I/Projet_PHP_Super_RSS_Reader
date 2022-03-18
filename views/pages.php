@@ -1,6 +1,6 @@
 <?php
 $askValue = ['6','9','12']; 
-$numberArticle = $_GET['numberArticle'];
+$numberArticle = $_GET['numberArticle'] ?? '';
 ?>
 <section class="articleSection">
     <div class="container-fluid">

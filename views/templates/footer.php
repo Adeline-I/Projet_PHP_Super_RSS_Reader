@@ -1,6 +1,4 @@
-    
-
-    <footer class="text-center text-white fixed-bottom footerBlack">
+    <footer class="text-center text-white footerBlack">
         <a href="#brand">
             <i class="bi bi-chevron-up"></i>
         </a>
