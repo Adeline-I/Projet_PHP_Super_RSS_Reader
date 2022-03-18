@@ -22,7 +22,7 @@
         <nav class="navbar nav-pills navbar-expand-xl">
             <div class="container-fluid">
                 <!-- Navbar brand left-->
-                <a class="navbar-brand" href="/html/nav_footer.html">
+                <a class="navbar-brand" href="/index.php">
                     <img src="/public/assets/img/Aziri_logo_transparent2.jpg.png"
                         alt="AZIRI, toute l'actualité gaming, une fusée décolle dans un panneau de signalisation et sur un fond orange"
                         id="brand">
