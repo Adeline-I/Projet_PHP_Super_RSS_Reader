@@ -1,3 +1,3 @@
 <?php
 
-define('CONSOLE', ['PS5', 'XBOX série X', 'SWITCH', 'PC', 'Dernières News']);
+define('CONSOLE', ['PS5', 'XBOX série X', 'SWITCH', 'PC', 'Prochaines sorties']);

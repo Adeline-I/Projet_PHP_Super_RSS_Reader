@@ -1,4 +1,5 @@
-    <footer class="text-center text-white footerBlack">
+
+    <footer class="text-center text-white fixed-bottom footerBlack">
         <a href="#brand">
             <i class="bi bi-chevron-up"></i>
         </a>
@@ -29,7 +30,7 @@
                             foreach (CONSOLE as $key=>$value) {
                         ?>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="console<?=$key?>" name="console[]" value="<?=$key?>">
+                            <input class="form-check-input" type="checkbox" onclick="return itemClicked(<?=$key?>)" id="console<?=$key?>" name="console[]" value="<?=$key?>">
                             <?= (isset($selectedConsole) && in_array($key, $selectedConsole)) ? 'checked' : '' ?>
                             <label class="form-check-label" for="console<?=$key?>"> 
                             <?=$value?>
