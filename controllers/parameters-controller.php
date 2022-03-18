@@ -17,7 +17,12 @@
         setcookie('console', json_encode($console), (time() + (86400 * 30))); // Le cookie expirera dans 86400s = 1 jour
     }
     $consoleCookies = json_decode($_COOKIE['console']);
-    var_dump($consoleCookies);
+
+    if (isset($_POST["valider"])) {
+        require(dirname(__FILE__).'/../article.php');
+    }
+
+    
 
     // header('location: /controllers/pages-controller.php');
 ?>
