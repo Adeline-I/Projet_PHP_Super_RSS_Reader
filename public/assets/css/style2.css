@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap');
 
 body {
-    background-image: url(https://i.ibb.co/dGZ55Dx/ideebackground2.png);
+    background-image: url(https://i.ibb.co/CBQqtkH/error.png);
     background-size: cover;
     background-position: top;
     color: #202225;
@@ -22,7 +22,7 @@ header a {
 
 /* Début Dark mode */
 body.dark, .themeArticle {
-    background-image: url(https://i.ibb.co/RPZKZkL/ideebackground.png);
+    background-image: url(https://i.ibb.co/7z0pcQx/errordark.png);
     background-size: cover;
     background-position: top;
     color: #FAF8FF;
@@ -121,7 +121,6 @@ li {
     -webkit-transition: all 0.1s linear;
     transition: all 0.1s linear;
 }
-
 .nav-link:hover,  .bi-gear-fill:hover, .bi-chevron-up:hover, .bi-x-lg:hover {
     opacity: 0.6;
 }
@@ -161,7 +160,7 @@ li {
     font-weight: bolder;
     outline: none;
 }
-.carousel-indicators{
+.carousel-indicators {
     border-color: #fcab3d;
     color: #fcab3d;
 }
@@ -171,9 +170,6 @@ li {
 /* ---------- Fin Page Home ---------- */
 
 /* ---------- Début Page Article ---------- */
-.articleSection, .colBorder, .articleSection, .themeArticleHeader {
-    border-bottom: 0.2rem solid #fcab3d;
-}
 .articleSection, .themeArticle {
     text-align: center;
     font-weight: bold;
@@ -197,21 +193,16 @@ li {
 .titleArticle  {
     color: #fcab3d;
 }
-.articleSection, .card {
+.articleSection .card {
     border: 2px #fb983b solid;
 }
-.articleSection, .card-header, .articleSection, .card-body {
+.articleSection .card-header, .articleSection .card-body {
     border-bottom: 0.1rem solid #fcab3d;
 }
 .art {
     color: #fb983b;
 }
-@media (min-width: 992px) {
-    .articleSection, .colBorder {
-        border-right: 0.2rem solid #fcab3d;
-        border-bottom: none;
-    }
-}
+
 /* ---------- Fin Page Article ---------- */
 
 /* ---------- Début Footer ---------- */
@@ -237,3 +228,19 @@ li {
 }
 /* Info bas de page pour le choix de l'actualité */
 /* ---------- Fin Footer ---------- */
+
+/* ---------- Début Page 404 ---------- */
+.titleError {
+    text-align: center;
+    font-weight: bold;
+    color: #fb983b;
+}
+.colError{
+    border-radius: 0.5rem;
+    border: 0.3rem solid #fb983b;
+}
+.messageError {
+    text-align: center;
+    font-weight: bold;
+}
+/* ---------- Fin Page 404 ---------- */

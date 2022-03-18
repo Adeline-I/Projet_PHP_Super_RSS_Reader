@@ -1,6 +1,8 @@
-    
 
     <footer class="text-center text-white fixed-bottom footerBlack">
+        <a href="#brand">
+            <i class="bi bi-chevron-up"></i>
+        </a>
             <!-- Grid container -->
             <!-- <div class="container p-4"></div> -->
             <!-- Grid container -->
@@ -28,7 +30,7 @@
                             foreach (CONSOLE as $key=>$value) {
                         ?>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="console<?=$key?>" name="console[]" value="<?=$key?>">
+                            <input class="form-check-input" type="checkbox" onclick="return itemClicked(<?=$key?>)" id="console<?=$key?>" name="console[]" value="<?=$key?>">
                             <?= (isset($selectedConsole) && in_array($key, $selectedConsole)) ? 'checked' : '' ?>
                             <label class="form-check-label" for="console<?=$key?>"> 
                             <?=$value?>
@@ -50,7 +52,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
     </script>
-    <script src="./public/assets/js/script.js"></script>
+    <script src="/public/assets/js/script.js"></script>
 </body>
 
 </html>
