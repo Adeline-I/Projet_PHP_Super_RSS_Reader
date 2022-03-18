@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap');
 
 body {
-    background-image: url(https://i.ibb.co/2s5QXYS/ideebackground3.png);
+    background-image: url(https://i.ibb.co/CBQqtkH/error.png);
     background-size: cover;
     background-position: top;
     color: #202225;
@@ -22,7 +22,7 @@ header a {
 
 /* Début Dark mode */
 body.dark, .themeArticle {
-    background-image: url(https://i.ibb.co/F4xKtPm/ideebackground.png);
+    background-image: url(https://i.ibb.co/7z0pcQx/errordark.png);
     background-size: cover;
     background-position: top;
     color: #FAF8FF;
